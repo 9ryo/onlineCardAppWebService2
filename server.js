@@ -28,7 +28,7 @@ app.get('/allcards', async (req, res) => {
         let connection = await mysql.createConnection({dbConfig});
         const [rows] = await connection.execute('SELECT * FROM defaultdb.cards');
         res.json(rows);
-    } catch (error) {
+    } catch (err) {
         console.error(err);
         res.status(500).json({message: 'Server error for allcards'});
     }
