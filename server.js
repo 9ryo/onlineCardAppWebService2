@@ -48,7 +48,7 @@ app.post('/addcard', async (req, res) => {
         }
 });
 
-// delete a card by id
+// delete a card by id 123
 app.delete('/deletecard/:id', async (req, res) => {
     const { id } = req.params;
 
